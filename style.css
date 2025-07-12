@@ -20,7 +20,7 @@ body{
 }
 .hero{
     background-image: url(./images/fondo.png);
-    height: 65vh;
+    height: 75vh;
     width:100vw;
     background-size: cover;
     display: flex;
@@ -33,16 +33,22 @@ body{
     margin-top: .5rem;
 }
 .title{
-    font-family: "Unbounded", sans-serif;
-      font-family: "Permanent Marker", cursive;
-    font-size: 6rem;
+  font-family: "Baloo 2", sans-serif;
+
+    font-size: 7rem;
     font-weight: bolder;
     color: #a82b2f;
 
 }
+.title2{
+    font-size: 2rem;
+    color: #363636;
+}
 .products {
   background-color: #ebebeb;
-  height: 35vh;
+  background-color: #dbd9d9;
+
+  height: 25vh;
   position: relative;
   overflow: hidden;
   border: 2px solid transparent;
@@ -75,13 +81,18 @@ body{
 .products * {
   position: relative;
   z-index: 2;} */
+.growArrow{
+font-size: 3rem;
+  animation: growinfinite 2s linear infinite alternate;
+transition: linear;
+}
 
-@keyframes rotacion{
+@keyframes growinfinite{
         from {
-        transform: rotate(0deg);
+        transform: scale(1);
       }
       to {
-        transform: rotate(360deg);
+        transform: scale(1.5);
       }
 }
 .productsContainer{
@@ -103,8 +114,8 @@ body{
     border-radius: .5rem;
     /* box-shadow: 0 0 .2rem .1rem rgb(0, 0, 0); */
     /* border: solid red 1px; */
-    height: 70%;
-    aspect-ratio: 1/1.2;
+    height: 50%;
+    aspect-ratio: 2/1;
     background-color: rgb(255, 255, 255);
     transition: .25s ease-in-out;
     display: flex;
@@ -141,9 +152,54 @@ filter: grayscale(0);
     transform: translateX(-50%);
     visibility: hidden;
 }
-.info{
-    height: 100vh;
-    width: 100vw;
+/* .card_azucar{
+    background-image: url(./images/azucar.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+.info_sales{
+      height: 100vh;
+  width: 100vw;
+  padding: 4rem 5rem;
+/*  */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto auto;
+
+  grid-template-areas:
+    "titulo  titulo"
+    "sal1 ."
+    ".  sal2"
+    "sal3 .";
+
+  gap: 1rem; /* opcional para separación entre celdas */
+}
+.sales{
+    background-color: yellow;
+}
+.sales_description{
+}
+.info_title{
+    font-size: 3rem;
+    text-align: center;
+    grid-area: titulo;
+    margin-bottom: 3rem;
+}
+.sales_comunes{
+    grid-area: sal1;
+    
+}
+.sales_secas{
+    grid-area: sal2;
+    
+}
+.sales_yodadas{
+    grid-area: sal3;
+    
+}
+.sales_image{
+    height: 15rem;
+    max-width: auto;
 }
 /* .hero::before{
     content: "";
