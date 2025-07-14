@@ -35,13 +35,13 @@ body{
 .title{
   font-family: "Baloo 2", sans-serif;
 
-    font-size: 7rem;
+    font-size: 6.2rem;
     font-weight: bolder;
     color: #a82b2f;
 
 }
 .title2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #363636;
 }
 .products {
@@ -108,13 +108,13 @@ transition: linear;
 }
 .card{
     color: #a82b2f;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
     position: relative;
     border-radius: .5rem;
     /* box-shadow: 0 0 .2rem .1rem rgb(0, 0, 0); */
     /* border: solid red 1px; */
-    height: 50%;
+    height: 60%;
     aspect-ratio: 2/1;
     background-color: rgb(255, 255, 255);
     transition: .25s ease-in-out;
@@ -138,7 +138,7 @@ filter: grayscale(0);
 }
 .card_logo_img{
     filter: grayscale(1);
-    height: 4rem;
+    height: 3rem;
     position: absolute;
     bottom: -1.5rem;
     left: 50%;
@@ -175,7 +175,6 @@ filter: grayscale(0);
   gap: 1rem; /* opcional para separación entre celdas */
 }
 .sales{
-    background-color: yellow;
 }
 .sales_description{
 }
@@ -208,3 +207,21 @@ filter: grayscale(0);
     width: 100%;
     background-color: rgba(68, 67, 67, 0.37);    
 } */
+     .fade-in {
+      opacity: 0;
+      transform: translateX(-300px);
+      transition: opacity 0.8s ease, transform 1s ease;
+    }
+ .fade-in-right {
+      opacity: 0%;
+      transform: translateX(300px);
+      transition: opacity 0.8s ease, transform 1s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateX(50px);
+    }
+       .fade-in-right.visible-right {
+      opacity: 1;
+      transform: translateX(-50px);
+    }
